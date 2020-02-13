@@ -1,1 +1,45 @@
-<p>employees works!</p>
+<h1>Employees</h1>
+
+<p *ngIf="!(employees$ | async)"><em>Loading...</em></p>
+<p>
+  <a [routerLink]="['/add']" class="btn btn-primary float-right mb-3">New employee</a>
+</p>
+
+<table class="table table-sm table-hover" *ngIf="(employees$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th>Created At</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Street</th>
+      <th>Zip Code</th>
+      <th>User</th>
+      <th>IP Address</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of (employees$ | async)">
+      <td>{{ employee.employeeID }}</td>
+      <td><a [routerLink]="['/employee/', employee.employeeID]">{{ employee.firstName }}</a></td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.country }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.createdAt | date: "dd.MM.y" }}</td>
+      <td>{{ employee.state }}</td>
+      <td>{{ employee.city }}</td>
+      <td>{{ employee.street }}</td>
+      <td>{{ employee.zipCode }}</td>
+      <td>{{ employee.userName }}</td>
+      <td>{{ employee.ipAddress }}</td>
+      <td><a [routerLink]="['/employee/edit/', employee.employeeID]" class="btn btn-primary btn-sm float-right">Edit</a></td>
+      <td><a [routerLink]="" (click)="delete(employee.employeeID)" class="btn btn-danger btn-sm float-right">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
