@@ -1,1 +1,17 @@
-<p>employee works!</p>
+<ng-container *ngIf="(employee$ | async) as employee; else loading">
+
+  <h3>{{ employee.firstName }} {{ employee.lastName }}</h3>
+  <ul>
+    <li>{{ employee.country }}</li>
+    <li>{{ employee.email }}</li>
+    <li>{{ employee.createdAt | date: "dd.MM.y" }}</li>
+    <li>{{ employee.state }}</li>
+    <li>{{ employee.city }}</li>
+    <li>{{ employee.street }}</li>
+    <li>{{ employee.zipCode }}</li>
+    <li>{{ employee.userName }}</li>
+    <li>{{ employee.ipAddress }}</li>
+  </ul>
+
+</ng-container>
+<ng-template #loading>Loading…</ng-template>
