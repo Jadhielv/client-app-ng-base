@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ClienAppBase'`, () => {
+  it(`should have as title 'ClientAppBase'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ClienAppBase');
+    expect(app.title).toEqual('ClientAppBase');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('ClienAppBase app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ClientAppBase app is running!');
   });
 });

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ClienAppBase": {
+    "ClientAppBase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ClienAppBase",
+            "outputPath": "dist/ClientAppBase",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ClienAppBase:build"
+            "browserTarget": "ClientAppBase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ClienAppBase:build:production"
+              "browserTarget": "ClientAppBase:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ClienAppBase:build"
+            "browserTarget": "ClientAppBase:build"
           }
         },
         "test": {
@@ -117,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ClienAppBase:serve"
+            "devServerTarget": "ClientAppBase:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ClienAppBase:serve:production"
+              "devServerTarget": "ClientAppBase:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ClienAppBase"
+  "defaultProject": "ClientAppBase"
 }
