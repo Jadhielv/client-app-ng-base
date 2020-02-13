@@ -32,8 +32,8 @@ export class EmployeeService {
       );
   }
 
-  getEmployee(employeeId: number): Observable<Employee> {
-    return this.http.get<Employee>(this.myAppUrl + this.myApiUrl + employeeId)
+  getEmployee(employeeID: number): Observable<Employee> {
+    return this.http.get<Employee>(this.myAppUrl + this.myApiUrl + employeeID)
       .pipe(
         retry(1),
         catchError(this.errorHandler)
@@ -48,16 +48,16 @@ export class EmployeeService {
       );
   }
 
-  updateEmployee(employeeId: number, employee: any): Observable<Employee> {
-    return this.http.put<Employee>(this.myAppUrl + this.myApiUrl + employeeId, JSON.stringify(employee), this.httpOptions)
+  updateEmployee(employeeID: number, employee: any): Observable<Employee> {
+    return this.http.put<Employee>(this.myAppUrl + this.myApiUrl + employeeID, JSON.stringify(employee), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandler)
       );
   }
 
-  deleteBlogPost(employeeId: number): Observable<Employee> {
-    return this.http.delete<Employee>(this.myAppUrl + this.myApiUrl + employeeId)
+  deleteEmployee(employeeID: number): Observable<Employee> {
+    return this.http.delete<Employee>(this.myAppUrl + this.myApiUrl + employeeID)
       .pipe(
         retry(1),
         catchError(this.errorHandler)

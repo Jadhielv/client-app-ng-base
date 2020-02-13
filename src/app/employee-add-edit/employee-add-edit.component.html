@@ -1,1 +1,76 @@
-<p>employee-add-edit works!</p>
+<h1>{{actionType}} employee</h1>
+<form [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+  <div class="form-group row">
+    <label class=" control-label col-md-12">First Name</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="firstName">
+    </div>
+    <span class="text-danger ml-3" *ngIf="firstName.invalid && formDir.submitted">
+      First Name is required.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="LastName">Last Name</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="lastName">
+    </div>
+    <span class="text-danger ml-3" *ngIf="lastName.invalid && formDir.submitted">
+      Last Name is required.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="Country">Country</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="country">
+    </div>
+    <span class="text-danger ml-3" *ngIf="country.invalid && formDir.submitted">
+      Country is required.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="Email">Email</label>
+    <div class="col-md-12">
+      <input class="form-control" type="email" formControlName="email">
+    </div>
+    <span class="text-danger ml-3" *ngIf="email.invalid && formDir.submitted">
+      Email is required.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="UserName">User Name</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="userName">
+    </div>
+    <span class="text-danger ml-3" *ngIf="userName.invalid && formDir.submitted">
+      UserName is required.
+    </span>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="State">State</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="state">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="City">City</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="city">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="Street">Street</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="street">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="control-label col-md-12" for="ZipCode">Zip Code</label>
+    <div class="col-md-12">
+      <input class="form-control" type="text" formControlName="zipCode">
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success float-right">Save</button>
+    <button class="btn btn-secondary float-left" (click)="cancel()">Cancel</button>
+  </div>
+</form>

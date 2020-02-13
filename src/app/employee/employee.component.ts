@@ -11,12 +11,12 @@ import { Employee } from '../models/employee';
 })
 export class EmployeeComponent implements OnInit {
   employee$: Observable<Employee>;
-  employeeId: number;
+  employeeID: number;
 
   constructor(private employeeService: EmployeeService, private avRoute: ActivatedRoute) {
     const idParam = 'id';
     if (this.avRoute.snapshot.params[idParam]) {
-      this.employeeId = this.avRoute.snapshot.params[idParam];
+      this.employeeID = this.avRoute.snapshot.params[idParam];
     }
   }
 
@@ -25,6 +25,6 @@ export class EmployeeComponent implements OnInit {
   }
 
   loadEmployee() {
-    this.employee$ = this.employeeService.getEmployee(this.employeeId);
+    this.employee$ = this.employeeService.getEmployee(this.employeeID);
   }
 }

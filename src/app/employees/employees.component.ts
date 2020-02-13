@@ -22,10 +22,10 @@ export class EmployeesComponent implements OnInit {
     this.employees$ = this.employeeService.getEmployees();
   }
 
-  delete(employeeId) {
-    const ans = confirm('Do you want to delete employee with id: ' + employeeId);
+  delete(employeeID: number) {
+    const ans = confirm('Do you want to delete employee with id: ' + employeeID);
     if (ans) {
-      this.employeeService.deleteBlogPost(employeeId).subscribe((data) => {
+      this.employeeService.deleteEmployee(employeeID).subscribe((data) => {
         this.loadEmployees();
       });
     }
