@@ -1,6 +1,6 @@
 <h1>Employees</h1>
 
-<p *ngIf="!(employees$ | async)"><em>Loading...</em></p>
+<p *ngIf="(employees$ | async) === false"><em>Loading...</em></p>
 <p>
   <a [routerLink]="['/add']" class="btn btn-primary float-right mb-3">New employee</a>
 </p>
