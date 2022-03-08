@@ -19,7 +19,7 @@
     "@angular/platform-browser": "^11.2.14",
     "@angular/platform-browser-dynamic": "^11.2.14",
     "@angular/router": "^11.2.14",
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^27.4.1",
     "bootstrap": "^4.5.3",
     "rxjs": "~6.6.3",
     "zone.js": "~0.10.3"
