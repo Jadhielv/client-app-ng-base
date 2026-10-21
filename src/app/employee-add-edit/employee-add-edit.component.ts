@@ -120,7 +120,7 @@ export class EmployeeAddEditComponent implements OnInit {
         userName: this.form.get(this.formUserName).value
       };
       this.employeeService.updateEmployee(employee.employeeID, employee)
-        .subscribe((data) => {
+        .subscribe(() => {
           this.goToDetails();
         });
     }

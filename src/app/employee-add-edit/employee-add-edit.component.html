@@ -1,9 +1,9 @@
 <h1>{{actionType}} employee</h1>
 <form [formGroup]="form" (ngSubmit)="save()" #formDir="ngForm" novalidate>
   <div class="form-group row">
-    <label class=" control-label col-md-12">First Name</label>
+    <label class=" control-label col-md-12" for="firstName">First Name</label>
     <div class="col-md-12">
-      <input class="form-control" type="text" formControlName="firstName">
+      <input id="firstName" class="form-control" type="text" formControlName="firstName">
     </div>
     <span class="text-danger ml-3" *ngIf="firstName.invalid && formDir.submitted">
       First Name is required.
