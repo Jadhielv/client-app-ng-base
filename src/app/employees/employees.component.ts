@@ -4,6 +4,7 @@ import { EmployeeService } from '../services/employee.service';
 import { Employee } from '../models/employee';
 
 @Component({
+  standalone: false,
   selector: 'app-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.scss']
