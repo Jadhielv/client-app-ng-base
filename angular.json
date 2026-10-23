@@ -67,11 +67,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ClientAppBase:build"
+            "buildTarget": "ClientAppBase:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ClientAppBase:build:production"
+              "buildTarget": "ClientAppBase:build:production"
             }
           }
         },
