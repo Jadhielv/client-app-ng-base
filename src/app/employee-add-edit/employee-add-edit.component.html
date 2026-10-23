@@ -5,45 +5,55 @@
     <div class="col-md-12">
       <input id="firstName" class="form-control" type="text" formControlName="firstName">
     </div>
-    <span class="text-danger ml-3" *ngIf="firstName.invalid && formDir.submitted">
-      First Name is required.
-    </span>
+    @if (firstName.invalid && formDir.submitted) {
+      <span class="text-danger ml-3">
+        First Name is required.
+      </span>
+    }
   </div>
   <div class="form-group row">
     <label class="control-label col-md-12" for="LastName">Last Name</label>
     <div class="col-md-12">
       <input class="form-control" type="text" formControlName="lastName">
     </div>
-    <span class="text-danger ml-3" *ngIf="lastName.invalid && formDir.submitted">
-      Last Name is required.
-    </span>
+    @if (lastName.invalid && formDir.submitted) {
+      <span class="text-danger ml-3">
+        Last Name is required.
+      </span>
+    }
   </div>
   <div class="form-group row">
     <label class="control-label col-md-12" for="Country">Country</label>
     <div class="col-md-12">
       <input class="form-control" type="text" formControlName="country">
     </div>
-    <span class="text-danger ml-3" *ngIf="country.invalid && formDir.submitted">
-      Country is required.
-    </span>
+    @if (country.invalid && formDir.submitted) {
+      <span class="text-danger ml-3">
+        Country is required.
+      </span>
+    }
   </div>
   <div class="form-group row">
     <label class="control-label col-md-12" for="Email">Email</label>
     <div class="col-md-12">
       <input class="form-control" type="email" formControlName="email">
     </div>
-    <span class="text-danger ml-3" *ngIf="email.invalid && formDir.submitted">
-      Email is required.
-    </span>
+    @if (email.invalid && formDir.submitted) {
+      <span class="text-danger ml-3">
+        Email is required.
+      </span>
+    }
   </div>
   <div class="form-group row">
     <label class="control-label col-md-12" for="UserName">User Name</label>
     <div class="col-md-12">
       <input class="form-control" type="text" formControlName="userName">
     </div>
-    <span class="text-danger ml-3" *ngIf="userName.invalid && formDir.submitted">
-      UserName is required.
-    </span>
+    @if (userName.invalid && formDir.submitted) {
+      <span class="text-danger ml-3">
+        UserName is required.
+      </span>
+    }
   </div>
   <div class="form-group row">
     <label class="control-label col-md-12" for="State">State</label>

@@ -1,5 +1,4 @@
-<ng-container *ngIf="(employee$ | async) as employee; else loading">
-
+@if (employee$ | async; as employee) {
   <h3>{{ employee.firstName }} {{ employee.lastName }}</h3>
   <ul>
     <li>{{ employee.country }}</li>
@@ -10,9 +9,10 @@
     <li>{{ employee.street }}</li>
     <li>{{ employee.zipCode }}</li>
     <li>{{ employee.userName }}</li>
-    <!-- <li>{{ employee.ipAddress }}</li> -->
   </ul>
-</ng-container>
+} @else {
+  Loading…
+}
 <div class="row">
   <div class="col-lg-12">
     <div class="col-sm-6">
@@ -21,4 +21,3 @@
     <div class="col-sm-6"></div>
   </div>
 </div>
-<ng-template #loading>Loading…</ng-template>
